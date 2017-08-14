@@ -50,11 +50,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.File;
 
-/**
- * @author Gustavo A. Isaza 
- * Universidad de Caldas
- * /
-
+// * @author Gustavo A. Isaza 
+// * Universidad de Caldas
+//
 public class UpdateOntology {
 
 	public static String raiz_AIU;
@@ -96,7 +94,7 @@ public class UpdateOntology {
 		String indName = args[1];
 		String patronAtaque = args[2];*/
 
-        String owlFile = "/home/gisaza/Tools/Jena-2.5.1/src-examples/jena/examples/ontology/leerOntologia/CargarOntologia/src/cargarontologia/OntoIDPSMA.owl";
+        String owlFile = "../cargarontologia/OntoIDPSMA.owl";
         String indName = "http://ingenieria.ucaldas.edu.co/gisaza/OntoIDPSMA.owl#Event";
         String Evento = "Ataque2";
 	String cid = "2";
@@ -251,7 +249,7 @@ public class UpdateOntology {
 	
 	
 	
-String OutOnto = "/home/gisaza/Tools/Jena-2.5.1/src-examples/jena/examples/ontology/leerOntologia/CargarOntologia/src/cargarontologia/OntoIDPSMA.owl";
+String OutOnto = "../cargarontologia/OntoIDPSMA.owl";
         try
         {
 	  FileOutputStream outputOntology = new FileOutputStream(OutOnto);
