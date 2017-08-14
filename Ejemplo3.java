@@ -15,9 +15,9 @@ public class Ejemplo3 {
     
       public static void main (String args[]) {
         // some definitions
-        String personURI    = "http://www.luisfercastillo.co";
-        String givenName    = "Luis";
-        String familyName   = "Castillo";
+        String personURI    = "http://inge.co";
+        String givenName    = "King";
+        String familyName   = "North";
         String fullName     = givenName + " " + familyName;
 
         // create an empty model
