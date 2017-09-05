@@ -72,7 +72,7 @@ public class UpdateOntology {
 //---Inicio Main TestOntology1 la Ontologia
     public UpdateOntology(String eventId) {
 
-        String owlFile = "/home/gisaza/Tools/Jena-2.5.1/src-examples/jena/examples/ontology/leerOntologia/CargarOntologia/src/cargarontologia/OntoIDPSMA.owl";
+        String owlFile = "./cargarontologia/OntoIDPSMA.owl";
         String indName = "http://ingenieria.ucaldas.edu.co/gisaza/OntoIDPSMA.owl#TrafficSignatures";
         String EventoCID = "Ataque2";
 	String cid = "2";
