@@ -18,35 +18,26 @@
 
 //package arq.examples;
 
-import com.hp.hpl.jena.query.Query ;
-import com.hp.hpl.jena.query.QueryExecution ;
-import com.hp.hpl.jena.query.QueryExecutionFactory ;
-import com.hp.hpl.jena.query.QueryFactory ;
-import com.hp.hpl.jena.query.ResultSet ;
-import com.hp.hpl.jena.query.ResultSetFormatter ;
-import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP ;
+import org.apache.jena.query.* ;
+import org.apache.jena.sparql.engine.http.QueryEngineHTTP ;
 
 public class ExampleDBpedia1
 {
     static public void main(String...argv)
     {
-        try {
-            String queryStr = "select distinct ?Concept where {[] a ?Concept} LIMIT 10";
-            Query query = QueryFactory.create(queryStr);
+        String queryStr = "select distinct ?Concept where {[] a ?Concept} LIMIT 10";
+        Query query = QueryFactory.create(queryStr);
 
-            // Remote execution.
-            QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
+        // Remote execution.
+        try ( QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query) ) {
             // Set the DBpedia specific timeout.
             ((QueryEngineHTTP)qexec).addParam("timeout", "10000") ;
 
             // Execute.
             ResultSet rs = qexec.execSelect();
             ResultSetFormatter.out(System.out, rs, query);
-            qexec.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }

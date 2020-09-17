@@ -19,24 +19,35 @@
 //package jena.examples.rdf ;
 
 import org.apache.jena.rdf.model.*;
-import org.apache.jena.vocabulary.*;
+import org.apache.jena.util.FileManager;
 
-/** Tutorial 1 creating a simple model
+import java.io.*;
+
+/** Tutorial 5 - read RDF XML from a file and write it to standard out
  */
+public class Tutorial05 extends Object {
 
-public class Tutorial01 extends Object {
-    // some definitions
-    static String personURI    = "http://somewhere/JohnSmith";
-    static String fullName     = "John Smith";
-    
-      public static void main (String args[]) {
+    /**
+        NOTE that the file is loaded from the class-path and so requires that
+        the data-directory, as well as the directory containing the compiled
+        class, must be added to the class-path when running this and
+        subsequent examples.
+    */    
+    static final String inputFileName  = "vc-db-1.rdf";
+                              
+    public static void main (String args[]) {
         // create an empty model
         Model model = ModelFactory.createDefaultModel();
 
-       // create the resource
-       Resource johnSmith = model.createResource(personURI);
-
-      // add the property
-      johnSmith.addProperty(VCARD.FN, fullName);
-      }
+        InputStream in = FileManager.get().open( inputFileName );
+        if (in == null) {
+            throw new IllegalArgumentException( "File: " + inputFileName + " not found");
+        }
+        
+        // read the RDF/XML file
+        model.read(in, "");
+                    
+        // write it to standard out
+        model.write(System.out);            
+    }
 }

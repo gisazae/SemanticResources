@@ -4,9 +4,15 @@
  */
 //package javajena;
 
-import com.hp.hpl.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.util.FileManager;
+import org.apache.jena.vocabulary.*;
+
+
+
+/*import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.util.FileManager;
+import com.hp.hpl.jena.util.FileManager;*/
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;

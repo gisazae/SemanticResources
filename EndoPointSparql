@@ -1,0 +1,12 @@
+select ?location
+where {
+ ?person <http://www.w3.org/2000/01/rdf-schema#label> 
+ "George Washington"@en.
+ ?location <http://dbpedia.org/property/namedFor> ?person
+      }
+
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+SELECT ?ford 
+WHERE {
+  ?ford foaf:name "Crawford County, Pennsylvania"@en .
+  }

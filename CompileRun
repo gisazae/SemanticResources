@@ -1,0 +1,22 @@
+CLASSPATH
+----------------------------
+// In Path ~/SemanticWebJAVAJDKJENA
+./apache-jena-3.4.0/lib/jena-base-3.4.0.jar:./apache-jena-3.4.0/lib/jena-arq-3.4.0.jar:./apache-jena-3.4.0/lib/jena-cmds-3.4.0.jar:./apache-jena-3.4.0/lib/jena-core-3.4.0.jar:./apache-jena-3.4.0/lib/jena-iri-3.4.0.jar:/./apache-jena-3.4.0/lib/jena-rdfconnection-3.4.0.jar:.:/root/SemanticWeb/apache-jena-3.4.0/lib/log4j-1.2.17.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/slf4j-api-1.7.25.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/slf4j-log4j12-1.7.25.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/slf4j-api-1.7.25.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/slf4j-log4j12-1.7.25.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/collection-0.7.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/slf4j-api-1.7.25.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/slf4j-log4j12-1.7.25.jar:/root/SemanticWeb/apache-jena-3.4.0/lib/collection-0.7.jar:.
+
+PATH
+-----------------------------
+/root/SemanticWebJAVAJDKJENA/jdk1.8.0_144/bin/:/roo/root/SemanticWebJAVAJDKJENA/apache-jena-3.4.0/bin/:/root/jdk1.8.0_144/bin/:/root/SemanticWeb/apache-jena-3.4.0/bin:/root/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+JENA_HOME
+------------------------
+/root/SemanticWebJAVAJDKJENA/apache-jena-3.4.0
+
+
+Compile
+------------------
+javac -cp /root/SemanticResources/:/root/SemanticWebJAVAJDKJENA/apache-jena-3.4.0/lib/* Tutorial09.java
+
+Run
+-----------------------
+java -cp /root/SemanticResources/NewVersionJenaExamples:/root/SemanticWebJAVAJDKJENA/apache-jena-3.4.0/lib/* Tutorial09
+
